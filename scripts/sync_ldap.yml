@@ -1,0 +1,46 @@
+---
+
+#.or:mple
+#  ldap:
+#    servers:
+#      - ldap://ldap1.example.org:389
+#      - ldap://ldap2.example.org:389
+#    start_tls: True
+#    bind_dn: CN=Zimbra,OU=Apps,DC=example,DC=org
+#    bind_pass: 'S3cr3t.P@ssPHr4z'
+#    type: ad # can be ad or ldap
+#
+#  users:
+#    base: OU=People,DC=example,DC=org
+#    filter: '(&(objectClass=user)(memberOf:1.2.840.113556.1.4.1941:=CN=Role_Mail,OU=Roles,DC=example,DC=org)(mail=*))'
+#    key: sAMAccountName
+#    alias_attr: otherMailbox
+#    attr_map:
+#      displayName: displayName
+#      description: description
+#      cn: cn
+#      sn: sn
+#      givenName: givenName
+#      telephoneNumber: telephoneNumber
+#      homePhone: homePhone
+#      mobile: mobile
+#      streetAddress: street
+#      l: l
+#      st: st
+#      co: co
+#      title: title
+#      company: company
+#  
+#  groups:
+#    base: OU=Groups,DC=example,DC=org
+#    filter: (&(objectClass=group)(mail=*))
+#    key: cn
+#    members_attr: member
+#    members_as_dn: True
+#    attr_map:
+#      displayName: displayName
+#      description: description
+#  
+#  zimbra:
+#    create_if_missing: False
+#    setup_ldap_auth: False
